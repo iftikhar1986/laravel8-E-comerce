@@ -25,8 +25,12 @@ Route::group(['prefix'=>'admin','middleware'=>['admin:admin']],function(){
 
 });
 
+
+/* Admin Routes */
+Route::get('/admin/logout',[AdminController::class,'destroy'])->name('admin.logout');
+
 Route::middleware(['auth:sanctum,admin', 'verified'])->get('/admin/dashboard', function () {
-    return view('dashboard');
+    return view('admin.index');
 })->name('dashboard');
 
 Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function () {
