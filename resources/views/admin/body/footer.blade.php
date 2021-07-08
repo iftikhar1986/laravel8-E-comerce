@@ -5,9 +5,9 @@
                 <a class="nav-link" href="javascript:void(0)">FAQ</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="https://hysetech.com/">Iftikhar</a>
+                <a class="nav-link" href="https://iftidev.com/">www.iftidev.com</a>
             </li>
         </ul>
     </div>
-    &copy; 2020 <a href="https://hysetech.com/">Iftikhar</a>. All Rights Reserved.
+    &copy; 2021 <a href="https://iftidev.com/">Iftikhar</a>. All Rights Reserved.
 </footer>
