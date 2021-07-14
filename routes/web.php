@@ -33,6 +33,7 @@ Route::group(['prefix'=>'admin','middleware'=>['admin:admin']],function(){
 /* Admin Routes */
 Route::get('/admin/logout',[AdminController::class,'destroy'])->name('admin.logout');
 Route::get('/admin/profile',[AdminProfileController::class,'index'])->name('admin.profile');
+Route::get('/admin/profile/edit',[AdminProfileController::class,'edit'])->name('admin.profile.edit');
 
 
 
