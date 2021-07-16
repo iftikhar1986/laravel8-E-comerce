@@ -17,16 +17,13 @@
                 <div class="box-body">
                     <div class="row">
                         <div class="col">
-                            <form novalidate>
+                            <form  method="post" action="{{ route('admin.profile.store') }}" enctype="multipart/form-data">
+                                @csrf
                                 <div class="row">
                                     <div class="col-12">
-
-
-
-                                        <div class="row">
+                                       <div class="row">
                                             <div class="col-6">
-
-                                                <div class="form-group">
+                                                  <div class="form-group">
                                                     <h5>Admin User Name <span class="text-danger">*</span></h5>
                                                     <div class="controls">
                                                         <input type="text" name="name" class="form-control" required data-validation-required-message="This field is required" value="{{ $editData->name }}"> </div>
@@ -49,12 +46,14 @@
                                                 <div class="form-group">
                                                     <h5>Profile Image <span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="file" id="image" name="profile_photo_path" class="form-control" required data-validation-required-message="This field is required"> </div>
+                                                        <input type="file" id="image" name="profile_photo_path" class="form-control" required=""> </div>
                                                 </div>
                                             </div>
                                             <div class="col-6">
 
-                                                <img  id="showImage" src="{{ (!empty($editData->profile_photo_path))? url('upload/admin_images/.$editData->profile_photo_path'): url('upload/no_image.png') }}" style="width: 100px; height: 100px;">
+                                                <img  id="showImage" src="{{ (!empty($adminData->profile_photo_path))?
+                                                                              url('upload/admin_images/'.$adminData->profile_photo_path):
+                                                                              url('upload/no_image.png') }}" style="width: 90px; height: 90px;" alt="User Avatar">
                                             </div>
                                         </div>
 
