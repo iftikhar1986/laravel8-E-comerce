@@ -58,23 +58,48 @@
                             <div class="form-group">
                                 <label class="info-title" for="exampleInputEmail1">Name <span>*</span></label>
                                 <input  class="form-control unicase-form-control text-input" id="name"  type="text" name="name" >
+                                @error('name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label class="info-title" for="exampleInputEmail2">Email Address <span>*</span></label>
                                 <input  class="form-control unicase-form-control text-input" id="email"  type="email" name="email" >
+                                @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
                             </div>
 
                             <div class="form-group">
                                 <label class="info-title" for="exampleInputEmail1">Phone Number <span>*</span></label>
                                 <input  class="form-control unicase-form-control text-input" id="exampleInputEmail1" id="phone"  type="text" name="phone" >
+                                @error('phone')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label class="info-title" for="exampleInputEmail1">Password <span>*</span></label>
                                 <input  class="form-control unicase-form-control text-input" id="password"  type="password" name="password" >
+                                @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label class="info-title" for="exampleInputEmail1">Confirm Password <span>*</span></label>
                                 <input  class="form-control unicase-form-control text-input" id="password_confirmation"  type="password" name="password_confirmation"  >
+                                @error('password_confirmation')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
                             </div>
                             <button type="submit" class="btn-upper btn btn-primary checkout-page-button">Sign Up</button>
                         </form>
